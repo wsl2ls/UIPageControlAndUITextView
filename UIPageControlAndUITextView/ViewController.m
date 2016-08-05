@@ -107,10 +107,10 @@
 
 - (void)setupUIPageControl{
     
-    //    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0)];
-    //    pageControl.numberOfPages = 8;
+        GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0)];
+        pageControl.numberOfPages = 8;
     
-    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0) withNumberOfPages:8];
+//    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0) withNumberOfPages:8];
     pageControl.backgroundColor = [UIColor orangeColor];
     pageControl.space = 10;
     pageControl.pageSize = CGSizeMake(30, 30);
