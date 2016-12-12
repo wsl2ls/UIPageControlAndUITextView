@@ -21,8 +21,10 @@
 - (instancetype)initWithFrame:(CGRect)frame withNumberOfPages:(NSInteger)numberOfPages{
     if (self == [super initWithFrame:frame]) {
         _pageSize = CGSizeMake(4, 4);
+        _currenPageSize = _pageSize;
         _space = 5.0;
         _numberOfPages = numberOfPages;
+        _currenStyle = Normal;
         return self;
     }
     return self;
@@ -32,7 +34,9 @@
     
     if (self == [super initWithFrame:frame]) {
         _pageSize = CGSizeMake(4, 4);
+        _currenPageSize = _pageSize;
         _space = 5.0;
+        _currenStyle = Normal;
         return self;
     }
     return self;
@@ -40,7 +44,8 @@
 
 - (void)setUpDots{
     
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y,self.space + self.numberOfPages * (self.pageSize.width + self.space), self.pageSize.height);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y,self.space + self.numberOfPages * (self.pageSize.width + self.space) - self.pageSize.width + self.currenPageSize.width, self.pageSize.height);
+
     
     for (int i = 0; i < self.numberOfPages; i++) {
         
@@ -50,7 +55,14 @@
         }
         
         UIImageView * imageView = self.subviews[i];
-        imageView.frame = CGRectMake(self.space + i * (self.pageSize.width + self.space), 0, self.pageSize.width, self.pageSize.height);
+        
+        if ( i < self.currentPage) {
+            imageView.frame = CGRectMake(self.space + i * (self.space + self.pageSize.width), 0, self.pageSize.width, self.pageSize.height);
+        }else if(i == self.currentPage){
+            imageView.frame = CGRectMake(self.space + i * (self.space + self.pageSize.width), -(self.currenPageSize.height - self.pageSize.height)/2.0f, self.currenPageSize.width, self.currenPageSize.height);
+        }else{
+            imageView.frame = CGRectMake(self.space + i * (self.space + self.pageSize.width) - self.pageSize.width + self.currenPageSize.width, 0, self.pageSize.width, self.pageSize.height);
+        }
         
         if (i == self.currentPage) {
             if (self.currenColor == nil) {
@@ -72,7 +84,7 @@
 
 - (CGSize)sizeForNumberOfPages:(NSInteger)numberOfPages{
     
-    return CGSizeMake(self.space + numberOfPages * (self.pageSize.width + self.space), self.pageSize.height);
+    return CGSizeMake(self.space + numberOfPages * (self.pageSize.width + self.space) - self.pageSize.width + self.currenPageSize.width, self.pageSize.height);
 }
 
 #pragma mark --- Setter

@@ -94,7 +94,7 @@
     
     //占位视图UIImageView
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(8 + 3, 200 + 3, 20, 20)];
-    imageView.image = [UIImage imageNamed:@"default"];
+    imageView.image = [UIImage imageNamed:@"wang.jpeg"];
     [self.view  addSubview:imageView];
     
 }
@@ -107,20 +107,21 @@
 
 - (void)setupUIPageControl{
     
-        GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0)];
-        pageControl.numberOfPages = 8;
+    //    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0)];
+    //    pageControl.numberOfPages = 8;
     
-//    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0) withNumberOfPages:8];
+    GOVPageControl * pageControl = [[GOVPageControl alloc] initWithFrame:CGRectMake(20, 100,0, 0) withNumberOfPages:8];
     pageControl.backgroundColor = [UIColor orangeColor];
     pageControl.space = 10;
-    pageControl.pageSize = CGSizeMake(30, 30);
+    pageControl.pageSize = CGSizeMake(20, 20);
+    pageControl.currenPageSize = CGSizeMake(30, 30);
     pageControl.currentPage = 0;
     
-    pageControl.currentImage = [UIImage imageNamed:@"current"];
-    pageControl.defaultImage = [UIImage imageNamed:@"default"];
+//    pageControl.currentImage = [UIImage imageNamed:@"current.jpeg"];
+//    pageControl.defaultImage = [UIImage imageNamed:@"wang.jpeg"];
     
-    //    pageControl.currenColor = [UIColor redColor];
-    //    pageControl.defaultColor = [UIColor blueColor];
+    pageControl.currenColor = [UIColor redColor];
+    pageControl.defaultColor = [UIColor blueColor];
     
     [pageControl setUpDots];
     _pageControl = pageControl;

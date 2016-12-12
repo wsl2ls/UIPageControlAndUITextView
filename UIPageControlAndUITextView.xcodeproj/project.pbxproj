@@ -16,8 +16,8 @@
 		313D3ECD1D530BEC004915E6 /* UIPageControlAndUITextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 313D3ECC1D530BEC004915E6 /* UIPageControlAndUITextViewTests.m */; };
 		313D3ED81D530BEC004915E6 /* UIPageControlAndUITextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 313D3ED71D530BEC004915E6 /* UIPageControlAndUITextViewUITests.m */; };
 		313D3EE71D530C4F004915E6 /* GOVPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 313D3EE61D530C4F004915E6 /* GOVPageControl.m */; };
-		313D3EEA1D531055004915E6 /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = 313D3EE81D531055004915E6 /* current.png */; };
-		313D3EED1D5321CC004915E6 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 313D3EEC1D5321CC004915E6 /* default.png */; };
+		314010D11DFA36650062384D /* current.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 314010D01DFA36650062384D /* current.jpeg */; };
+		31802E961DF9579100C6D9E4 /* wang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 31802E951DF9579100C6D9E4 /* wang.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		313D3ED91D530BEC004915E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		313D3EE51D530C4F004915E6 /* GOVPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOVPageControl.h; sourceTree = "<group>"; };
 		313D3EE61D530C4F004915E6 /* GOVPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOVPageControl.m; sourceTree = "<group>"; };
-		313D3EE81D531055004915E6 /* current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = current.png; sourceTree = "<group>"; };
-		313D3EEC1D5321CC004915E6 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		314010D01DFA36650062384D /* current.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = current.jpeg; sourceTree = "<group>"; };
+		31802E951DF9579100C6D9E4 /* wang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wang.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,9 @@
 		313D3EB11D530BEC004915E6 /* UIPageControlAndUITextView */ = {
 			isa = PBXGroup;
 			children = (
-				313D3EE81D531055004915E6 /* current.png */,
-				313D3EEC1D5321CC004915E6 /* default.png */,
+				3144BA521D5497EA0054AF1A /* New Group */,
+				3144BA531D5497F90054AF1A /* 未命名文件夹 */,
+				31802E951DF9579100C6D9E4 /* wang.jpeg */,
 				313D3EB51D530BEC004915E6 /* AppDelegate.h */,
 				313D3EB61D530BEC004915E6 /* AppDelegate.m */,
 				313D3EE51D530C4F004915E6 /* GOVPageControl.h */,
@@ -149,6 +150,21 @@
 				313D3ED91D530BEC004915E6 /* Info.plist */,
 			);
 			path = UIPageControlAndUITextViewUITests;
+			sourceTree = "<group>";
+		};
+		3144BA521D5497EA0054AF1A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		3144BA531D5497F90054AF1A /* 未命名文件夹 */ = {
+			isa = PBXGroup;
+			children = (
+				314010D01DFA36650062384D /* current.jpeg */,
+			);
+			path = "未命名文件夹";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				313D3EC21D530BEC004915E6 /* LaunchScreen.storyboard in Resources */,
-				313D3EEA1D531055004915E6 /* current.png in Resources */,
+				31802E961DF9579100C6D9E4 /* wang.jpeg in Resources */,
+				314010D11DFA36650062384D /* current.jpeg in Resources */,
 				313D3EBF1D530BEC004915E6 /* Assets.xcassets in Resources */,
 				313D3EBD1D530BEC004915E6 /* Main.storyboard in Resources */,
-				313D3EED1D5321CC004915E6 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +528,7 @@
 				313D3EDE1D530BEC004915E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		313D3EDF1D530BEC004915E6 /* Build configuration list for PBXNativeTarget "UIPageControlAndUITextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +537,7 @@
 				313D3EE11D530BEC004915E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		313D3EE21D530BEC004915E6 /* Build configuration list for PBXNativeTarget "UIPageControlAndUITextViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +546,7 @@
 				313D3EE41D530BEC004915E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
